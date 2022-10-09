@@ -24,28 +24,28 @@
         }
 
         a {
-            color: rgb(141, 141, 255) !important;
+            /* color: rgb(141, 141, 255) !important; */
         }
     </style>
 </head>
 <body class="bg-neutral-900 text-white py-8" style="margin-left: 10%; margin-right: 10%; font-family: 'Iosevka Bold';">
     <span id="start" class="text-6xl" style="font-family: 'Iosevka Bold';">Barn documentation</span></br></br>
-    <span id="what-is-barn" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">What is barn?</span></br>
+    <span id="what-is-barn" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">What is barn?</span></br>
     It's a simple programming language written in Go that is compiled to C. Syntax is very easy and complex, Barn can call C. 
     <br>Barn is very optimilized and fast, it was written with idea to be the most fastes as he can and the most easiest to use as he can.
     </br></br>
-    <span id="how-to-learn-barn" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">How to learn barn?</span></br>
+    <span id="how-to-learn-barn" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">How to learn barn?</span></br>
     You can learn it by reading this documentation carefully</br></br>
-    <span id="community" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Community</span></br>
+    <span id="community" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Community</span></br>
     We have own discord server where you can get help with barn</br></br>
     <span id="download" class="text-6xl" style="font-family: 'Iosevka Bold';">How to download barn</span></br></br>
-    <span id="dependeces" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Dependeces</span></br>
+    <span id="dependeces" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Dependeces</span></br>
     <ul class="list-disc pl-10">
         <li>GoLang compiler</li>
         <li>Bash (for unix)</li>
         <li>GCC</li>
     </ul><br>
-    <span id="macos-linux" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">MacOS & Linux</span></br>
+    <span id="macos-linux" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">MacOS & Linux</span></br>
     <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
         <code>
             git clone https://github.com/barn-lang/barn<br>
@@ -55,7 +55,7 @@
             barn # Should work fine<br>
         </code>
     </div><br>
-    <span id="windows" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Windows</span></br>
+    <span id="windows" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Windows</span></br>
     <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
         <code>
             git clone https://github.com/barn-lang/barn<br>
@@ -102,7 +102,7 @@
         <li>bool (true/false)</li>
     </ul><br>
     <span id="function" class="text-6xl" style="font-family: 'Iosevka Bold';">Functions</span></br><br>
-    <span id="function-declaration" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function declaration</span></br>
+    <span id="function-declaration" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Function declaration</span></br>
     To declare a function you need to do this type of grammar
     <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
         <code>
@@ -111,8 +111,8 @@
             }<br>
         </code>
     </div><br>
-    <span id="function-return" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function return</span></br>
-    To do function returing after () you need to give there -> /* data type */ (<a href="#data-types">Data types</a>)
+    <span id="function-return" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Function return</span></br>
+    To do function returing after () you need to give there -> /* data type */ (<a class="text-green-300" href="#data-types">Data types</a>)
     <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
         <code>
             fun get_age() -> int {<br>
@@ -121,7 +121,7 @@
             }<br>
         </code>
     </div><br>
-    <span id="function-arguments" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function arguments</span></br>
+    <span id="function-arguments" class="text-4xl text-green-300" style="font-family: 'Iosevka Bold';">Function arguments</span></br>
     Argument function need to be provided between ()
     <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
         <code>
@@ -151,7 +151,6 @@
         <li>fun <span class="text-green-300">os_file_exists</span>(string filename) -> bool</li>
         <li>fun <span class="text-green-300">os_read_file</span>(string filename) -> string</li>
         <li>fun <span class="text-green-300">os_write_file</span>(string filename, string value) -> bool</li>
-        <li>fun <span class="text-green-300">string_malloc</span>(int size) -> string</li>
     </ul><br>
     <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Variables</span></br><br>
     To declare a variable you need to do this grammar
@@ -297,11 +296,7 @@
             }<br>
         </code>
     </div><br><br>
-    <span class="text-3xl" style="font-family: 'Iosevka Bold';">See more <a href="https://github.com/barn-lang/barn/tree/main/examples">examples</a> on our github</span>
+    <span class="text-3xl" style="font-family: 'Iosevka Bold';">See more <a class="text-green-300" href="https://github.com/barn-lang/barn/tree/main/examples">examples</a> on our github</span>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> a048f6d29ab36fed12c1ff44a4d768e5216d0d5b
