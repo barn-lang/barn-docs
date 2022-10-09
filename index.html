@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barn Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Iosevka Bold';
+            src: url('font/iosevka-bold.ttf');
+            font-weight: bold;
+        }
+
+        @font-face {
+            font-family: 'Iosevka Light';
+            src: url('font/iosevka-light.ttf');
+        }
+
+        @font-face {
+            font-family: 'Iosevka Regular';
+            src: url('font/iosevka-regular.ttf');
+        }
+
+        a {
+            color: rgb(141, 141, 255) !important;
+        }
+    </style>
+</head>
+<body class="bg-neutral-900 text-white py-8" style="margin-left: 10%; margin-right: 10%; font-family: 'Iosevka Bold';">
+    <span id="start" class="text-6xl" style="font-family: 'Iosevka Bold';">Barn documentation</span></br></br>
+    <span id="what-is-barn" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">What is barn?</span></br>
+    It's a simple programming language written in Go that is compiled to C. Syntax is very easy and complex, Barn can call C. 
+    <br>Barn is very optimilized and fast, it was written with idea to be the most fastes as he can and the most easiest to use as he can.
+    </br></br>
+    <span id="how-to-learn-barn" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">How to learn barn?</span></br>
+    You can learn it by reading this documentation carefully</br></br>
+    <span id="community" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Community</span></br>
+    We have own discord server where you can get help with barn</br></br>
+    <span id="download" class="text-6xl" style="font-family: 'Iosevka Bold';">How to download barn</span></br></br>
+    <span id="dependeces" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Dependeces</span></br>
+    <ul class="list-disc pl-10">
+        <li>GoLang compiler</li>
+        <li>Bash (for unix)</li>
+        <li>GCC</li>
+    </ul><br>
+    <span id="macos-linux" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">MacOS & Linux</span></br>
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            git clone https://github.com/barn-lang/barn<br>
+            cd barn<br>
+            bash build.sh<br>
+            cp ./barn /bin/barn<br>
+            barn # Should work fine<br>
+        </code>
+    </div><br>
+    <span id="windows" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Windows</span></br>
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            git clone https://github.com/barn-lang/barn<br>
+            cd barn<br>
+            ./build.bat<br>
+            ./barn # Should work fine<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Your first "Hello, World" in Barn</span></br><br>
+    Create file and write to it this content
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;puts("Hello, World!")<br>
+            }<br>
+        </code>
+    </div>
+    then compile it with command
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            barn ./hello_world.ba<br>
+        </code>
+    </div><br>
+    <span id="comments" class="text-6xl" style="font-family: 'Iosevka Bold';">Comments</span></br><br>
+    Inline comments
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
+        <code>
+            // Inline comment<br>
+        </code>
+    </div><br>
+    Multiline comments
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
+        <code>
+            /* Multiline comment */<br>
+        </code>
+    </div><br>
+    <span id="data-types" class="text-6xl" style="font-family: 'Iosevka Bold';">Types</span></br><br>
+    In barn there are 5 types:
+    <ul class="list-disc pl-10">
+        <li>string ("hello")</li>
+        <li>char ('a')</li>
+        <li>int (100)</li>
+        <li>float (4.3)</li>
+        <li>bool (true/false)</li>
+    </ul><br>
+    <span id="function" class="text-6xl" style="font-family: 'Iosevka Bold';">Functions</span></br><br>
+    <span id="function-declaration" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function declaration</span></br>
+    To declare a function you need to do this type of grammar
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
+        <code>
+            fun function_name() {<br>
+            &emsp;/* function body */<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="function-return" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function return</span></br>
+    To do function returing after () you need to give there -> /* data type */ (<a href="#data-types">Data types</a>)
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 44%;">
+        <code>
+            fun get_age() -> int {<br>
+            &emsp;/* function body */<br>
+            &emsp;return 18<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="function-arguments" class="text-4xl text-slate-300" style="font-family: 'Iosevka Bold';">Function arguments</span></br>
+    Argument function need to be provided between ()
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun add_two_numbers(int first_num, int second_num) -> int {<br>
+            &emsp;/* function body */<br>
+            &emsp;return first_num + second_num<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Built in functions</span></br><br>
+    <span style="font-family: 'Iosevka Bold';" class="text23xl">./lib/std.ba</span>
+    <ul class="list-disc pl-10">
+        <li>fun <span class="text-green-300">string_compare</span>(string s1, string s2) -> bool</li>
+        <li>fun <span class="text-green-300">string_length</span>(string s) -> int</li>
+        <li>fun <span class="text-green-300">string_reverse</span>(string s)</li>
+        <li>fun <span class="text-green-300">iota</span>(int num, string buf, int base)</li>
+        <li>fun <span class="text-green-300">string_malloc</span>(int size) -> string</li>
+        <li>fun <span class="text-green-300">input</span>() -> string</li>
+        <li>fun <span class="text-green-300">print</span>(string s)</li>
+        <li>fun <span class="text-green-300">printnum</span>(int num)</li>
+        <li>fun <span class="text-green-300">printbool</span>(bool boo)</li>
+        <li>fun <span class="text-green-300">free_string</span>(string s)</li>
+    </ul><br>
+    <span style="font-family: 'Iosevka Bold';" class="text23xl">./lib/os.ba</span>
+    <ul class="list-disc pl-10">
+        <li>fun <span class="text-green-300">os_current_system</span>() -> string</li>
+        <li>fun <span class="text-green-300">os_file_exists</span>(string filename) -> bool</li>
+        <li>fun <span class="text-green-300">os_read_file</span>(string filename) -> string</li>
+        <li>fun <span class="text-green-300">os_write_file</span>(string filename, string value) -> bool</li>
+        <li>fun <span class="text-green-300">string_malloc</span>(int size) -> string</li>
+    </ul><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Variables</span></br><br>
+    To declare a variable you need to do this grammar
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let age: int = 18<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Modify variable</span></br><br>
+    To assign new variable you need to do this
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let age: int = 18<br>
+            &emsp;age = 21<br>
+            }<br>
+        </code>
+    </div><br>
+    To add value to a variable you need to do this
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let i: int = 0<br>
+            &emsp;i += 1 // i = 0 + 1<br>
+            }<br>
+        </code>
+    </div><br>
+    To minus value to a variable you need to do this
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let i: int = 1<br>
+            &emsp;i -= 1 // i = 1 - 1 <br>
+            }<br>
+        </code>
+    </div><br>
+    To multiply value to a variable you need to do this
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let i: int = 6<br>
+            &emsp;i *= 2 // i = 6 * 2<br>
+            }<br>
+        </code>
+    </div><br>
+    To divide value to a variable you need to do this
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;let i: int = 6<br>
+            &emsp;i /= 2 // i = 6 / 2<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">If, elif, else</span></br><br>
+    If statement
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;if |1 == 1| {<br>
+            &emsp;&emsp;puts("1 == 1")<br>
+            &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    Elif statement
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+            &emsp;if |1 == 1| {<br>
+            &emsp;&emsp;puts("1 == 1")<br>
+            &emsp;} elif |1 == 2| {<br>
+            &emsp;&emsp;puts("1 == 2")<br>
+            &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    Else statement
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+                &emsp;if |1 == 1| {<br>
+                    &emsp;&emsp;puts("1 == 1")<br>
+                &emsp;} elif |1 == 2| {<br>
+                    &emsp;&emsp;puts("1 == 2")<br>
+                &emsp;} else {<br>
+                    &emsp;&emsp;puts("1 != 1 || 1 != 2")<br>
+                &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">While</span></br><br>
+    While statement
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+                &emsp;let i: int = 0<br>
+                &emsp;while |i < 5| {<br>
+                    &emsp;&emsp;printnum(i)<br>
+                    &emsp;&emsp;i++<br>
+                &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">For</span></br><br>
+    For statement
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+                &emsp;for let i: int = 0; i < 5; i++ {<br>
+                    &emsp;&emsp;printnum(i)<br>
+                &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Break</span></br><br>
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+                &emsp;for let i: int = 0; i < 5; i++ {<br>
+                    &emsp;&emsp;if |i == 3| {<br>
+                        &emsp;&emsp;&emsp;puts("i == 3")<br>
+                        &emsp;&emsp;&emsp;break<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;printnum(i)<br>
+                &emsp;}<br>
+            }<br>
+        </code>
+    </div><br>
+    <span id="hello-world" class="text-6xl" style="font-family: 'Iosevka Bold';">Continue</span></br><br>
+    <div class="px-3 py-2 my-2 bg-neutral-800 rounded-2xl" style="width: 40%;">
+        <code>
+            fun main() {<br>
+                &emsp;for let i: int = 0; i < 5; i++ {<br>
+                    &emsp;&emsp;if |i == 3| {<br>
+                        &emsp;&emsp;&emsp;puts("i == 3")<br>
+                        &emsp;&emsp;&emsp;continue<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;printnum(i)<br>
+                &emsp;}<br>
+            }<br>
+        </code>
+    </div><br><br>
+    <span class="text-3xl" style="font-family: 'Iosevka Bold';">See more <a href="https://github.com/barn-lang/barn/tree/main/examples">examples</a> on our github</span>
+
+</body>
+</html>
