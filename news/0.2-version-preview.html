@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barn Language - News</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span>
+                Barn language
+            </span>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+            </ul>
+        </div>
+        <div class="repo">
+            <span>
+                <a href="https://github.com/barn-lang/barn">Github</a>
+            </span>
+        </div>
+    </div>
+    <div class="news news-content" style="padding-top: 20px">
+        <span class="main-title">News</span><br>
+        New version of barn (0.2v) will have in it these things:<br>
+		<ul class="news-list-content">
+			<li>
+				New type system, that's more parser thing we will just add better understandment of types
+				in parser
+			</li>
+			<li>
+				Change the statements look so insted of<br>
+				<div class="code">
+					<code>
+						if |1 == 1| {<br>
+						&emsp;&emsp;print("1 is 1, easy lol")<br>
+						}<br>
+					</code>
+				</div>
+				We have something like this more modern and without some weird<br>
+				characters, 'cause after all this time i see this syntax mistake<br>
+				very well<br>
+				<div class="code">
+					<code>
+						if (1 == 1) {<br>
+						&emsp;&emsp;print("1 is 1, easy lol")<br>
+						}<br>
+					</code>
+				</div>
+			</li>
+			<li>
+				Also now for will look like this<br>
+				<div class="code">
+					<code>
+						for (let i: int = 0; i < 100; i++) { {<br>
+						&emsp;&emsp;print("printing this hundred times")<br>
+						}<br>
+					</code>
+				</div>
+			  	So if, while, for look this same<br>
+			</li>
+			<li>
+				Better Standard library, in 0.1v this library is very very obscured
+				and don't have all of the important functions, in 0.2v i want to 
+				expand built in libraries so you can do everything what you do in
+				C or any normal programming language without injecting C into Barn
+			</li>
+			<li>
+				Fix codegen, actually codegen is only one thing that is written pretty
+				good in whole barn but there's still some things that are not working well
+			</li>
+			<li>
+				Speeeeeeed, barn was suppose to be the fastes language in the world, it is
+				but not the fastes of course. The speed in barn is not that tragic but not
+				the best over all
+			</li>
+			<li>
+				Fix that we can call functions inside the math expressions that is the biggest
+				bug in the barn and lots of people are terrified with it, i'm saying about this:
+
+					<div class="code">
+						<code>
+							fun get_int() int {<br>
+							&emsp;&emsp;return 1<br>
+							}<br><br>
+							fun main() {<br>
+							&emsp;&emsp;let the_int: int = get_int() // This will work<br>
+							&emsp;&emsp;let the_int2: int = get_int() + 1 // But this wouldn't<br>
+							}<br>
+						</code>
+					</div>
+			</li>
+			<li>
+				Auto type in variables, so we don't need to write the type after let we will just
+				recognize the type by ourself
+			</li>
+			<li>
+				Other micro changes
+			</li>
+		</ul>
+		That's all we want to add to barn, if you want to help us in implementing all of it write to
+		me on discord, I will help you in getting into the source code!!
+		My Discord: Solindek#9808<br><br>
+		Version 0.2 soon, this update is a big step to getting barn working better and maybe
+		getting out from beta!
+    </div>
+	<br>
+	<br>
+</body>
+</html>

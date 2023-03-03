@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Iosevka Bold';
+    src: url('font/iosevka-bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Iosevka Light';
+    src: url('font/iosevka-light.ttf');
+}
+
+@font-face {
+    font-family: 'Iosevka Regular';
+    src: url('font/iosevka-regular.ttf');
+}
+
+body {
+    background-color: #171717;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(18, 18, 18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3%;
+}
+
+.navbar > div {
+    width: 33%;
+}
+
+.navbar .menu {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar .logo {
+    text-align: left;
+}
+
+.navbar .repo {
+    text-align: right;
+}
+
+.navbar .menu ul li {
+    display: inline-block;
+    padding: 0px 9px;
+}
+
+.navbar .menu ul li a {
+    color: rgb(146, 233, 24);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .logo span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navbar .repo span a {
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: rgb(146, 233, 24);
+}
+
+.main-subtitle {
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(146, 233, 24);
+}
+
+.main-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(217, 219, 214);
+}
+
+.main div {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(146, 233, 24);
+    padding: 10px 40px;
+    margin-top: 30px;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-10px);
+}
+
+.breaker {
+    border-top: white 4px dashed;
+}
+
+.news {
+    padding: 0px 30px;
+}
+
+.news-content {
+    font-weight: 500;
+    font-size: 20px;
+    width: 50%;
+}
+
+.code {
+    width: 80%;
+    background-color: #0b0b0b;
+    padding: 10px 15px;
+    margin: 15px 5px;
+    border-radius: 9px;
+}
+
+.news-list-content li 
+{
+    margin: 25px 0;
+}
