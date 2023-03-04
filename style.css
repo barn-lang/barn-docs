@@ -1,151 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@font-face {
-    font-family: 'Iosevka Bold';
-    src: url('font/iosevka-bold.ttf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Iosevka Light';
-    src: url('font/iosevka-light.ttf');
-}
-
-@font-face {
-    font-family: 'Iosevka Regular';
-    src: url('font/iosevka-regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Golos+Text:wght@400;500;600;700;800;900&family=Tilt+Warp&display=swap');
 
 body {
-    background-color: #171717;
-    font-family: 'Poppins', sans-serif;
-    /* font-family: 'Raleway', sans-serif; */
+    background-color: #0e0e0f;
+    font-family: 'Golos Text', sans-serif;
     color: white;
     margin: 0;
     padding: 0;
-}
-
-.navbar {
-    background-color: rgb(18, 18, 18);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 3%;
-}
-
-.navbar > div {
-    width: 33%;
-}
-
-.navbar .menu {
-    text-align: center;
     width: 100%;
 }
 
-.navbar .logo {
-    text-align: left;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+    z-index: 100;
 }
 
-.navbar .repo {
-    text-align: right;
+header > div {
+    width: 33.33%;
 }
 
-.navbar .menu ul li {
-    display: inline-block;
-    padding: 0px 9px;
+.container {
+    height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.navbar .menu ul li a {
-    color: rgb(146, 233, 24);
-    font-weight: bold;
-    text-decoration: none;
+.main-container {
+    height: 80vh;
+    display: block;
+    background: linear-gradient(#7707ff, #4603aa);
 }
 
-.navbar .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .logo span {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.navbar .repo span a {
-    font-weight: 600;
-    font-size: 20px;
-    text-decoration: none;
+.btn-simple {
+    background: linear-gradient(#121215, #171718);
+    -webkit-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 1);
     color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.main {
-    height: 45vh;
+.btn-simple:hover {
+    transform: translateY(-5px);
+}
+
+.logo {
+    letter-spacing: 20px;
+    font-size: 32px;
+    color: #fff;
+    font-family: 'Tilt Warp', cursive;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.link {
+    color: white;
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.link:hover {
+    transform: translateY(-5px);
+}
+
+.link a:hover {
+    color: #efefef;
+}
+
+@keyframes animation-down {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+.arrowdown {
+    animation-name: animation-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#code_example {
+    padding: 100px 60px;
+}
+
+.code_example {
+    padding: 100px 60px;
+}
+
+.title {
+    font-size: 70px; 
+    font-weight: 700;
+    background: linear-gradient(#a75eff, #b889ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc {
+    font-size: 24px; 
+    font-weight: 600;
+}
+
+.code-view {
+    margin: 20px 0px;
+    background-color: #191919;
+    width: 70%;
+    padding: 20px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+/* GruvboxDark theme */
+.code-black   { color: #000000; }
+.code-red     { color: #cc241d; }
+.code-green   { color: #98971a; }
+.code-yellow  { color: #d79921; }
+.code-blue    { color: #458588; }
+.code-magenta { color: #b16286; }
+.code-cyan    { color: #689d6a; }
+.code-white   { color: #a89984; }
+.code-gray    { color: #676664; }
+
+.normal-links {
+    color: #7707ff;
+}
+
+.start_using {
+    padding-top: 50px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-title {
-    font-size: 42px;
-    font-weight: 900;
-    color: rgb(146, 233, 24);
+.discord-server-widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
 }
 
-.main-subtitle {
-    font-size: 24px;
-    font-weight: 900;
-    color: rgb(146, 233, 24);
-}
-
-.main-desc {
-    font-size: 15px;
-    font-weight: 400;
-    color: rgb(217, 219, 214);
-}
-
-.main div {
-    text-align: center;
-}
-
-button {
-    background-color: rgb(146, 233, 24);
-    padding: 10px 40px;
-    margin-top: 30px;
-    color: white;
-    border: none;
+.discord-server-widget {
+    /* background-color: #4603aa; */
+    background: linear-gradient(#7707ff, #4603aa);
+    margin: 30px 0px;
+    max-width: 30%;
+    padding: 15px 25px;
     border-radius: 24px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button:hover {
-    transform: translateY(-10px);
-}
-
-.breaker {
-    border-top: white 4px dashed;
-}
-
-.news {
-    padding: 0px 30px;
-}
-
-.news-content {
-    font-weight: 500;
+.discord-server-widget-title {
     font-size: 20px;
-    width: 50%;
+    font-weight: 700;
 }
 
-.code {
-    width: 80%;
-    background-color: #0b0b0b;
-    padding: 10px 15px;
-    margin: 15px 5px;
-    border-radius: 9px;
+.discord-server-widget-desc {
+    font-size: 15px;
+    font-weight: 600;
+    color: #b8b8b8;
 }
 
-.news-list-content li 
-{
-    margin: 25px 0;
+.discord-server-widget-button {
+    background: linear-gradient(#ffffff, #dcdcdc);
+    border: none;
+    border-radius: 12px;
+    padding: 5px 20px;
+    font-weight: 700;
+}
+
+.warning {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 10px;
+    color: white;
+    background-color: #222222;
+    top: 0;
+    width: 100%;
 }

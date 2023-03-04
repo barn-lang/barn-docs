@@ -8,43 +8,142 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <span>
-                Barn language
-            </span>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="docs.html">Documentation</a></li>
-            </ul>
-        </div>
-        <div class="repo">
-            <span>
-                <a href="https://github.com/barn-lang/barn">Github</a>
-            </span>
-        </div>
-    </div>
-    <div class="main">
-        <div>
-            <span class="main-title">Barn Language</span><br/>
-            <span>Have fun with programming</span><br/>
-            <button onclick="alert('Maybe this will be anty-advertaisment but you shouldn\'t take barn seriouse, this is just a little project that is not stable at this moment')">Why should i try barn?</button><br/>
-            <a href="docs.html"><button>Documentation</button></a><br/>
-            <a href="https://github.com/barn-lang/barn"><button>Download (0.1v)</button></a><br/>
-        </div>
-    </div><br>
-    <div class="breaker"></div><br>
-    <div class="news">
-        <span class="main-title">News</span><br>
-        <a href="news/0.2-version-preview.html" style="color: white; text-decoration: none;">
-            <div>
-                <span class="main-subtitle">Preview of 0.2 version!</span><br>
-                <span class="main-desc">This post shows all of the goods that 0.2 version will add soon.</span>
+    <div class="warning">Barn is still in development so there's plenty of bugs, please report them at <a href="https://discord.com/invite/bv2rfyC6">Our discord server</a>. Also we don't recommend to use it in your comercial project</div>
+    <container class="main-container">
+        <header>
+            <div style="text-align: left;"><span class="logo">BARN</span></div>
+            <div style="text-align: right;">
+                <div class="link"><a href="documentation.html">Documentation</a></div>
+                <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link"><a href="news.html">News</a></div>
+                <div class="link"><a href="download.html">Download</a></div>
             </div>
-        </a>
-    </div>
+        </header>
+        <div class="container">
+            <div>
+                <div style="margin-bottom: 15px;"><span style="font-size: 70px; font-weight: 700;">Fast and easy programming!</span></div>
+                <span style="font-size: 24px; font-weight: 600;">Create everything you really like in a brand new, complex and easysyntax<br>  programming language that is well documented</span>
+                <br><br>
+                <button class="btn-simple">Documentation</button>
+                <button class="btn-simple">News</button>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
+            <div>
+                <a href="#code_example">
+                    <svg class="arrowdown" fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 330 330" xml:space="preserve">
+                    <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div id="code_example">
+            <div>
+                <div class="title">Look at our easy syntax</div><br>
+                <span class="desc">
+                    Barn syntax is very very easy, it's inspired with syntax languages like C, JavaScript, Go, Rust and other.
+                    Syntax is still in<br> development, and we are still changing it!
+                </span>
+                <div>
+                    <div class="code-view">
+                        <code>
+                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                            &emsp;<span class="code-blue">println</span>(<span class="code-green">"Hello, World!"</span>)<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code_example">
+            <div>
+                <div class="title">How to learn?</div><br>
+                <span class="desc">
+                    Barn is extreamly easy and don't have any complex mechanics, but as every programming language you need to<br> write & learn to get
+                    fluent in it. The best source of learning is our <a class="normal-links" href="documentation.html">Documentation</a> where everything is shown very <br>well how to use Barn properly
+                    and use the Barn code style. Remember Barn is still in development and <br>everything can always change that's why our Documentation is divided
+                    in subpages that show every version<br> documentation
+                </span>
+                <div>
+                    <div class="code-view">
+                        <code>
+                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                            &emsp;<span class="code-magenta">let</span> <span class="code-blue">is_barn_hard</span>: <span class="code-yellow">auto</span> = <span class="code-blue">false</span> <span class="code-gray">// Of course it isn't hard</span><br>
+                            &emsp;<span class="code-magenta">if</span> <span class="code-blue">is_barn_hard</span> == <span class="code-blue">false</span> {<br> 
+                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"Barn is extreamly easyyy"</span>)<br>
+                            &emsp;} <span class="code-magenta">else</span> {<br>
+                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"This print wouldn't show anytime soon, because barn is easy lol"</span>)<br>
+                            &emsp;}<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code_example">
+            <div>
+                <div class="title">100% Free and Open Source</div><br>
+                <span class="desc">
+                    Everything that is open source and free is better! Like Linus Torvald the Linux Kernel author said:<br>
+                    <div style="font-style: italic; font-weight: 500; font-size: 20px; color: #dfdfdf; padding: 2px 20px; margin: 20px 0;">
+                        Software is like sex: it's better when it's free. ~ Linus Torvald
+                    </div>
+                    It will be pretty weird when an compiler wouldn't be free and globally avaliable. So everyone can build, run<br>and code in barn
+                    100% free and safe.
+                </span>
+                <div>
+                    <div class="code-view">
+                        <code>
+                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                            &emsp;<span class="code-magenta">let</span> <span class="code-blue">open_source_software</span>: <span class="code-yellow">auto</span> = <span class="code-blue">true</span><br>
+                            &emsp;<span class="code-magenta">if</span> <span class="code-blue">open_source_software</span> == <span class="code-blue">true</span> {<br> 
+                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"This software is cool!"</span>)<br>
+                            &emsp;} <span class="code-magenta">else</span> {<br>
+                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"Nah we want the source lol"</span>)<br>
+                            &emsp;}<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="start_using">
+            <div style="text-align: center;">
+                <span style="font-size: 70px; font-weight: 700;">Start using Barn today!</span><br>
+                <span style="font-size: 24px; font-weight: 600;">Join to our Discord Community</span>
+                
+            </div>
+        </div>
+        <div class="discord-server-widget-container">
+            <div class="discord-server-widget">
+                <div style="display: inline-block; padding-right: 30px">
+                    <span class="discord-server-widget-title">Average Barn Enjoyers</span><br>
+                    <span class="discord-server-widget-desc">Members 69</span>
+                </div>
+                <div style="display: inline-block;">
+                    <a href="https://discord.com/invite/bv2rfyC6">
+                        <button class="discord-server-widget-button">Join!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </container>
+    <script>
+        // https://discord.com/api/guilds/1028291656862142466/widget.json
+
+        fetch("https://discord.com/api/guilds/1028291656862142466/widget.json")
+            .then((res) => res.json())
+            .then((res) => {
+                console.log(res)
+                document.querySelector(".discord-server-widget-title").innerHTML = res.name;
+                document.querySelector(".discord-server-widget-desc").innerHTML = `Members ${res.members.length}`;
+            })
+    </script>
 </body>
 </html>
