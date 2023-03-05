@@ -8,24 +8,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="menu">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+        <div class="center">
+            <div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="documentation.html">Documentation</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="news.html">News</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="download.html">Download</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="about_us.html">About us</a></div>
+            </div>
+        </div>
+    </div>
     <div class="warning">Barn is still in development so there's plenty of bugs, please report them at <a href="https://discord.com/invite/bv2rfyC6">Our discord server</a>. Also we don't recommend to use it in your comercial project</div>
     <container class="main-container">
         <header>
             <div style="text-align: left;"><span class="logo">BARN</span></div>
-            <div style="text-align: right;">
-                <div class="link"><a href="documentation.html">Documentation</a></div>
-                <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
-                <div class="link"><a href="news.html">News</a></div>
-                <div class="link"><a href="download.html">Download</a></div>
+            <div style="text-align: right;" class="nav-left-side">
+                <div class="menu_computer">
+                    <div class="link"><a href="documentation.html">Documentation</a></div>
+                    <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                    <div class="link"><a href="news.html">News</a></div>
+                    <div class="link"><a href="download.html">Download</a></div>
+                    <div class="link"><a href="about_us.html">About us</a></div>
+                </div>
+                <div class="menu_mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </div>
             </div>
         </header>
         <div class="container">
             <div>
-                <div style="margin-bottom: 15px;"><span style="font-size: 70px; font-weight: 700;">Fast and easy programming!</span></div>
-                <span style="font-size: 24px; font-weight: 600;">Create everything you really like in a brand new, complex and easysyntax<br>  programming language that is well documented</span>
+                <div style="margin-bottom: 15px;" class="container-title-margin"><span style="font-size: 70px; font-weight: 700;" class="container-title-main">Fast and easy programming!</span></div>
+                <span style="font-size: 24px; font-weight: 600;" class="container-title-desc">Create everything you really like in a brand new, complex and easy syntax<br>  programming language that is well documented</span>
                 <br><br>
-                <button class="btn-simple">Documentation</button>
-                <button class="btn-simple">News</button>
+                <button class="btn-simple" onclick="location.pathname='documentation.html'">Documentation</button>
+                <button class="btn-simple" onclick="location.pathname='news.html'">News</button>
             </div>
         </div>
         <div style="display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
@@ -42,11 +66,11 @@
         </div>
         <div id="code_example">
             <div>
-                <div class="title">Look at our easy syntax</div><br>
-                <span class="desc">
+                <div class="title">Look at our easy syntax</div>
+                <div class="desc">
                     Barn syntax is very very easy, it's inspired with syntax languages like C, JavaScript, Go, Rust and other.
-                    Syntax is still in<br> development, and we are still changing it!
-                </span>
+                    Syntax is still in development, and we are still changing it!
+                </div>
                 <div>
                     <div class="code-view">
                         <code>
@@ -61,13 +85,13 @@
         </div>
         <div class="code_example">
             <div>
-                <div class="title">How to learn?</div><br>
-                <span class="desc">
-                    Barn is extreamly easy and don't have any complex mechanics, but as every programming language you need to<br> write & learn to get
-                    fluent in it. The best source of learning is our <a class="normal-links" href="documentation.html">Documentation</a> where everything is shown very <br>well how to use Barn properly
-                    and use the Barn code style. Remember Barn is still in development and <br>everything can always change that's why our Documentation is divided
-                    in subpages that show every version<br> documentation
-                </span>
+                <div class="title">How to learn?</div>
+                <div class="desc">
+                    Barn is extreamly easy and don't have any complex mechanics, but as every programming language you need to write & learn to get
+                    fluent in it. The best source of learning is our <a class="normal-links" href="documentation.html">Documentation</a> where everything is shown very well how to use Barn properly
+                    and use the Barn code style. Remember Barn is still in development and everything can always change that's why our Documentation is divided
+                    in subpages that show every version documentation
+                </div>
                 <div>
                     <div class="code-view">
                         <code>
@@ -87,15 +111,15 @@
         </div>
         <div class="code_example">
             <div>
-                <div class="title">100% Free and Open Source</div><br>
-                <span class="desc">
-                    Everything that is open source and free is better! Like Linus Torvald the Linux Kernel author said:<br>
-                    <div style="font-style: italic; font-weight: 500; font-size: 20px; color: #dfdfdf; padding: 2px 20px; margin: 20px 0;">
+                <div class="title">100% Free and Open Source</div>
+                <div class="desc">
+                    Everything that is open source and free is better! Like Linus Torvald the Linux Kernel author said:
+                    <div class="quote">
                         Software is like sex: it's better when it's free. ~ Linus Torvald
                     </div>
-                    It will be pretty weird when an compiler wouldn't be free and globally avaliable. So everyone can build, run<br>and code in barn
+                    It will be pretty weird when an compiler wouldn't be free and globally avaliable. So everyone can build, run and code in barn
                     100% free and safe.
-                </span>
+                </div>
                 <div>
                     <div class="code-view">
                         <code>
@@ -115,9 +139,8 @@
         </div>
         <div class="start_using">
             <div style="text-align: center;">
-                <span style="font-size: 70px; font-weight: 700;">Start using Barn today!</span><br>
-                <span style="font-size: 24px; font-weight: 600;">Join to our Discord Community</span>
-                
+                <span class="title-no-color">Start using Barn today!</span><br>
+                <span class="desc-no-color">Join to our Discord Community</span>
             </div>
         </div>
         <div class="discord-server-widget-container">
@@ -133,6 +156,12 @@
                 </div>
             </div>
         </div>
+        <div class="footer">
+            <div class="footer-left">
+                <span class="footer-title">Barn Language Copyrigth &copy; 2022-2023</span><br>
+                <span class="footer-desc">Made with ❤️ by Barn Developers</span>
+            </div>
+        </div>
     </container>
     <script>
         // https://discord.com/api/guilds/1028291656862142466/widget.json
@@ -144,6 +173,14 @@
                 document.querySelector(".discord-server-widget-title").innerHTML = res.name;
                 document.querySelector(".discord-server-widget-desc").innerHTML = `Members ${res.members.length}`;
             })
+
+        document.querySelector(".menu_mobile").onclick = () => {
+            document.querySelector(".menu").style.display = "block";
+        }
+
+        document.querySelector(".close").onclick = () => {
+            document.querySelector(".menu").style.display = "none";
+        }
     </script>
 </body>
 </html>
