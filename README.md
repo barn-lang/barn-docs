@@ -1,2 +1,0 @@
-# barn-docs
-Barn Documentation 

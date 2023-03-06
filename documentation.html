@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barn Language - Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+        <div class="center">
+            <div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./index.html">Home</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="documentation.html">Documentation</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="news.html">News</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="download.html">Download</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="about_us.html">About us</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="warning">Barn is still in development so there's plenty of bugs, please report them at <a href="https://discord.com/invite/bv2rfyC6">Our discord server</a>. Also we don't recommend to use it in your comercial project</div> -->
+    <header class="header-gradient">
+        <div style="text-align: left;"><img src="logo_with_barn.png" class="logo" /></div>
+        <div style="text-align: right;" class="nav-left-side">
+            <div class="menu_computer">
+                <div class="link"><a href="./index.html">Home</a></div>
+                <div class="link"><a href="documentation.html">Documentation</a></div>
+                <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link"><a href="news.html">News</a></div>
+                <div class="link"><a href="download.html">Download</a></div>
+                <div class="link"><a href="about_us.html">About us</a></div>
+            </div>
+            <div class="menu_mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div id="code_example">
+        <div>
+            <div class="title">Documentation</div>
+            <div class="desc">
+                Underneath you have table of content of Barn Documentation:
+                <ul>
+                    <li><a class="normal-links" href="#building">Building</a></li>
+                    <li><a class="normal-links" href="#helloworld">Hello World</a></li>
+                    <li><a class="normal-links" href="#comments">Comments</a></li>
+                    <li><a class="normal-links" href="#operators">Operators</a></li>
+                    <li><a class="normal-links" href="#types">Types</a></li>
+                    <li><a class="normal-links" href="#functions">Functions</a></li>
+                    <li><a class="normal-links" href="#std">Standard Library</a></li>
+                    <li><a class="normal-links" href="#variables">Variables</a></li>
+                    <li><a class="normal-links" href="#if_elif_else">If, Elif, Else</a></li>
+                    <li><a class="normal-links" href="#while">While</a></li>
+                    <li><a class="normal-links" href="#for">For</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="building">
+            <div class="subtitle-no-color">Building</div>
+            <div class="desc">
+                Building for Linux will look like this:
+                <div>
+                    <div class="code-view">
+                        <code>
+                            git clone https://github.com/barn-lang/barn<br>
+                            cd barn<br>
+                            bash build.sh<br>
+                            barn --help<br>
+                        </code>
+                    </div>
+                </div>
+                Or if you want you can download binary releases in our <a class="normal-links" href="https://github.com/barn-lang/barn">github repository</a>.
+                Getting Barn for Windows will look like this:
+                <div>
+                    <div class="code-view">
+                        <code>
+                            git clone https://github.com/barn-lang/barn<br>
+                            cd barn<br>
+                            ./build.bat<br>
+                            ./barn<br>
+                        </code>
+                    </div>
+                </div>
+                If you have any type of errors with building or running barn compiler get help at our <a class="normal-links" href="https://discord.com/invite/bv2rfyC6">discord server</a>.
+            </div>
+        </div>
+        <div id="helloworld">
+            <div class="subtitle-no-color">Hello, World</div>
+            <div class="desc">
+                After getting your barn compiler up and running maybe let start with creating the most easiest program that will just
+                print "Hello, World!". Here's example code of program like that, you can write it by using <span class="inline-code">puts</span> function
+                without importing <span class="inline-code">std.ba</span> library which makes it more lightweight, or using <span class="inline-code">print</span>/
+                <span class="inline-code">println</span>. We will show two of them, let's start with the lightweight one:
+                <div>
+                    <div class="code-view">
+                        <code>
+                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                            &emsp;<span class="code-blue">puts</span>(<span class="code-green">"Hello, World!"</span>)<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+                Now the other way of printing "Hello, World!" by using std (Standard Library). About this library is written more in
+                the <a class="normal-links" href="#std">Standard Library</a> chapter. Funfact you can contribute to this library and add functions that you want too! 
+                Anyways here is the example
+                <div>
+                    <div class="code-view">
+                        <code>
+                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                            &emsp;<span class="code-blue">println</span>(<span class="code-green">"Hello, World!"</span>)<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+                We can see that in the first line we are import <span class="inline-code">std.ba</span> library, Next we are
+                declaring a function named <span class="inline-code">main</span> which is the entry point of every program
+                <div class="tip">
+                    <span class="tip-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: -5px" width="28px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+                        </svg>
+                        Tip!
+                    </span><br>
+                    <span class="tip-value">Without main function your program won't compile, 'cause the error that barn compiler is sending.</span><br>
+                </div>
+                and next in the function body we are calling <span class="inline-code">println</span> which will print the "Hello, World" thing and go to the newline
+                , puts function does it too so we don't need to write at the end of string <span class="inline-code"><span class="code-blue">\n</span></span> which is a character
+                indicating newline
+            </div>
+        </div>
+        <div id="comments">
+            <div class="subtitle-no-color">Comments</div>
+            <div class="desc">
+                In Barn there's two types of comments inline comments and multiline comments. Comments are these parts of code
+                that compiler doesn't see you can put in them everything and that won't change your program work. Here is an example
+                of it:
+            </div>
+            <div>
+                <div class="code-view">
+                    <code>
+                        <span class="code-gray">// This is an inline comment, it will end on newline</span><br>
+                        <span class="code-gray">/*<br> &emsp;This is an multiline comment, it will end until we will write this<br>*/</span>
+                    </code>
+                </div>
+            </div>
+            <div class="tip">
+                <span class="tip-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: -5px" width="28px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+                    </svg>
+                    Tip!
+                </span><br>
+                <span class="tip-value">It is good and smart to comment your code in parts when it's little bit unreadable otherwise your code will be a total mess like Barn Compiler 😊</span><br>
+            </div>
+        </div>
+        <div id="operators">
+            <div class="subtitle-no-color">Operators</div>
+            <div class="desc">
+                Operators are pretty important in every language, they do math, sometimes manipulate arrays and open/close functions bodies and arguments,
+                in this chapter we will explain how operators works in Barn. There are actually 20 operators that work in barn
+            </div>
+            <div>
+                <div class="code-view">
+                    <code>
+                        <span class="code-red">COMMA</span> <span class="code-gray">// , Does seperate arguments in functons</span><br>
+                        <span class="code-red">ARROW</span> <span class="code-gray">// -> After this symbol is type return of function</span><br>
+                        <span class="code-red">OPENPARENT</span> <span class="code-gray">// ( Opens arguments</span><br>
+                        <span class="code-red">CLOSEPARENT</span> <span class="code-gray">// ) Closes arguments</span><br>
+                        <span class="code-red">OPENBRACKET</span> <span class="code-gray">// { Open body function</span><br>
+                        <span class="code-red">CLOSEBRACKET</span> <span class="code-gray">// } Close body function</span><br>
+                        <span class="code-red">OPENBRACE</span> <span class="code-gray">// [ Open array</span><br>
+                        <span class="code-red">CLOSEBRACE</span> <span class="code-gray">// ] Open array</span><br>
+                        <span class="code-red">OROR</span> <span class="code-gray">// || Or</span><br>
+                        <span class="code-red">ANDAND</span> <span class="code-gray">// && And</span><br>
+                        <span class="code-red">GT</span> <span class="code-gray">// > Great than</span><br>
+                        <span class="code-red">GTE</span> <span class="code-gray">// >= Great than of equal</span><br>
+                        <span class="code-red">LT</span> <span class="code-gray">// < Less than</span><br>
+                        <span class="code-red">LTE</span> <span class="code-gray">// <= Less than of equal</span><br>
+                        <span class="code-red">ASN</span> <span class="code-gray">// = Assigment</span><br>
+                        <span class="code-red">EQ</span> <span class="code-gray">// == Equals</span><br>
+                        <span class="code-red">NEQ</span> <span class="code-gray">// != No equals</span><br>
+                        <span class="code-red">PLUS</span> <span class="code-gray">// + Plus</span><br>
+                        <span class="code-red">MINUS</span> <span class="code-gray">// - Minus</span><br>
+                        <span class="code-red">MUL</span> <span class="code-gray">// * Multiply</span><br>
+                        <span class="code-red">DIV</span> <span class="code-gray">// / Divide</span><br>
+                        <span class="code-red">MOD</span> <span class="code-gray">// % Modulus</span><br>
+                        <span class="code-red">BANG</span> <span class="code-gray">// ! Bang</span><br>
+                        <span class="code-red">PLUSASN</span> <span class="code-gray">// += Plus assigment</span><br>
+                        <span class="code-red">MINUSASN</span> <span class="code-gray">// -= Minus assigment</span><br>
+                        <span class="code-red">MULASN</span> <span class="code-gray">// *= Multiply assigment</span><br>
+                        <span class="code-red">DIVASN</span> <span class="code-gray">// /= Divide assigment</span><br>
+                        <span class="code-red">INCREMENTATION</span> <span class="code-gray">// ++ Inrementation of an value</span><br>
+                        <span class="code-red">DECREMENTATION</span> <span class="code-gray">// -- Decrementation of an value</span><br>
+                    </code>
+                </div>
+            </div>
+            <div class="tip">
+                <span class="tip-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: -5px" width="28px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+                    </svg>
+                    Tip!
+                </span><br>
+                <span class="tip-value">Usage of every operator will be shown in the next chapters</span><br>
+            </div>
+        </div>
+        <div id="types">
+          <div class="subtitle-no-color">Types</div>
+          <div class="desc">Soon...</div>
+        </div>
+        <div id="functions">
+            <div class="subtitle-no-color">Functions</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="std">
+            <div class="subtitle-no-color">Standard Library</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="variables">
+            <div class="subtitle-no-color">Variables</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="if_elif_else">
+            <div class="subtitle-no-color">If, Elif, Else</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="while">
+            <div class="subtitle-no-color">While</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="for">
+            <div class="subtitle-no-color">For</div>
+            <div class="desc">Soon...</div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-left">
+            <span class="footer-title">Barn Language Copyrigth &copy; 2022-2023</span><br>
+            <span class="footer-desc">Made with ❤️ by Barn Developers</span>
+        </div>
+    </div>
+    <script>
+        // https://discord.com/api/guilds/1028291656862142466/widget.json
+
+        fetch("https://discord.com/api/guilds/1028291656862142466/widget.json")
+            .then((res) => res.json())
+            .then((res) => {
+                console.log(res)
+                document.querySelector(".discord-server-widget-title").innerHTML = res.name;
+                document.querySelector(".discord-server-widget-desc").innerHTML = `Members ${res.members.length}`;
+            })
+
+        document.querySelector(".menu_mobile").onclick = () => {
+            document.querySelector(".menu").style.display = "block";
+            document.querySelector(".menu").style.position = "fixed";
+        }
+
+        document.querySelector(".close").onclick = () => {
+            document.querySelector(".menu").style.display = "none";
+        }
+    </script>
+</body>
+</html>
