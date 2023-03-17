@@ -61,6 +61,10 @@
                     <li><a class="normal-links" href="#if_elif_else">If, Elif, Else</a></li>
                     <li><a class="normal-links" href="#while">While</a></li>
                     <li><a class="normal-links" href="#for">For</a></li>
+                    <li><a class="normal-links" href="#extern">Extern</a></li>
+                    <li><a class="normal-links" href="#const">Const</a></li>
+                    <li><a class="normal-links" href="#use">Variable Use/Unused</a></li>
+                    <li><a class="normal-links" href="#call_c">Call C from Barn</a></li>
                 </ul>
             </div>
         </div>
@@ -97,21 +101,8 @@
             <div class="subtitle-no-color">Hello, World</div>
             <div class="desc">
                 After getting your barn compiler up and running maybe let start with creating the most easiest program that will just
-                print "Hello, World!". Here's example code of program like that, you can write it by using <span class="inline-code">puts</span> function
-                without importing <span class="inline-code">std.ba</span> library which makes it more lightweight, or using <span class="inline-code">print</span>/
-                <span class="inline-code">println</span>. We will show two of them, let's start with the lightweight one:
-                <div>
-                    <div class="code-view">
-                        <code>
-                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
-                            &emsp;<span class="code-blue">puts</span>(<span class="code-green">"Hello, World!"</span>)<br>
-                            }<br>
-                        </code>
-                    </div>
-                </div>
-                Now the other way of printing "Hello, World!" by using std (Standard Library). About this library is written more in
-                the <a class="normal-links" href="#std">Standard Library</a> chapter. Funfact you can contribute to this library and add functions that you want too! 
-                Anyways here is the example
+                print "Hello, World!". Here's example code of program like that, you can write it by using <span class="inline-code">println</span> function.
+                Here is the code:
                 <div>
                     <div class="code-view">
                         <code>
@@ -133,17 +124,16 @@
                     </span><br>
                     <span class="tip-value">Without main function your program won't compile, 'cause the error that barn compiler is sending.</span><br>
                 </div>
-                and next in the function body we are calling <span class="inline-code">println</span> which will print the "Hello, World" thing and go to the newline
-                , puts function does it too so we don't need to write at the end of string <span class="inline-code"><span class="code-blue">\n</span></span> which is a character
-                indicating newline
+                and next in the function body we are calling <span class="inline-code">println</span> which will print the "Hello, World" thing and go to the newline.
+                Nothing more complicated! It's that easy..
             </div>
         </div>
         <div id="comments">
             <div class="subtitle-no-color">Comments</div>
             <div class="desc">
                 In Barn there's two types of comments inline comments and multiline comments. Comments are these parts of code
-                that compiler doesn't see you can put in them everything and that won't change your program work. Here is an example
-                of it:
+                that compiler doesn't see, you can put in them everything and that won't change your program logic. Here is an example
+                of comments:
             </div>
             <div>
                 <div class="code-view">
@@ -152,6 +142,30 @@
                         <span class="code-gray">/*<br> &emsp;This is an multiline comment, it will end until we will write this<br>*/</span>
                     </code>
                 </div>
+            </div>
+            <div class="desc">
+                And here is the example how can we use them to document our code (properly):
+            </div>
+            <div>
+                <div class="code-view">
+                    <code>
+                        <span class="code-gray">// Import standard library</span><br>
+                        <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+
+                        <span class="code-gray">// Entry point of this program</span><br>
+                        <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                        &emsp;&emsp;<span class="code-gray">// Ask the user for his name and get it</span><br>
+                        &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"What's your name"</span>)<br>
+                        &emsp;&emsp;<span class="code-magenta">let</span> <span class="code-blue">user_name</span>: <span class="code-yellow">auto</span> = <span class="code-blue">input</span>()<br><br>
+                        &emsp;&emsp;<span class="code-gray">// Welcome the user!</span><br>
+                        &emsp;&emsp;<span class="code-blue">print</span>(<span class="code-green">"Hi "</span>)<br>
+                        &emsp;&emsp;<span class="code-blue">print</span>(<span class="code-blue">user_name</span>)<br>
+                        }<br>
+                    </code>
+                </div>
+            </div>
+            <div class="desc">
+                Also a little tip from us :)
             </div>
             <div class="tip">
                 <span class="tip-title">
@@ -172,7 +186,7 @@
             <div>
                 <div class="code-view">
                     <code>
-                        <span class="code-red">COMMA</span> <span class="code-gray">// , Does seperate arguments in functons</span><br>
+                        <span class="code-red">COMMA</span> <span class="code-gray">// , Does separate arguments in functions</span><br>
                         <span class="code-red">ARROW</span> <span class="code-gray">// -> After this symbol is type return of function</span><br>
                         <span class="code-red">OPENPARENT</span> <span class="code-gray">// ( Opens arguments</span><br>
                         <span class="code-red">CLOSEPARENT</span> <span class="code-gray">// ) Closes arguments</span><br>
@@ -186,7 +200,7 @@
                         <span class="code-red">GTE</span> <span class="code-gray">// >= Great than of equal</span><br>
                         <span class="code-red">LT</span> <span class="code-gray">// < Less than</span><br>
                         <span class="code-red">LTE</span> <span class="code-gray">// <= Less than of equal</span><br>
-                        <span class="code-red">ASN</span> <span class="code-gray">// = Assigment</span><br>
+                        <span class="code-red">ASN</span> <span class="code-gray">// = Assignment</span><br>
                         <span class="code-red">EQ</span> <span class="code-gray">// == Equals</span><br>
                         <span class="code-red">NEQ</span> <span class="code-gray">// != No equals</span><br>
                         <span class="code-red">PLUS</span> <span class="code-gray">// + Plus</span><br>
@@ -195,11 +209,11 @@
                         <span class="code-red">DIV</span> <span class="code-gray">// / Divide</span><br>
                         <span class="code-red">MOD</span> <span class="code-gray">// % Modulus</span><br>
                         <span class="code-red">BANG</span> <span class="code-gray">// ! Bang</span><br>
-                        <span class="code-red">PLUSASN</span> <span class="code-gray">// += Plus assigment</span><br>
-                        <span class="code-red">MINUSASN</span> <span class="code-gray">// -= Minus assigment</span><br>
-                        <span class="code-red">MULASN</span> <span class="code-gray">// *= Multiply assigment</span><br>
-                        <span class="code-red">DIVASN</span> <span class="code-gray">// /= Divide assigment</span><br>
-                        <span class="code-red">INCREMENTATION</span> <span class="code-gray">// ++ Inrementation of an value</span><br>
+                        <span class="code-red">PLUSASN</span> <span class="code-gray">// += Plus assignment</span><br>
+                        <span class="code-red">MINUSASN</span> <span class="code-gray">// -= Minus assignment</span><br>
+                        <span class="code-red">MULASN</span> <span class="code-gray">// *= Multiply assignment</span><br>
+                        <span class="code-red">DIVASN</span> <span class="code-gray">// /= Divide assignment</span><br>
+                        <span class="code-red">INCREMENTATION</span> <span class="code-gray">// ++ Incrementation of an value</span><br>
                         <span class="code-red">DECREMENTATION</span> <span class="code-gray">// -- Decrementation of an value</span><br>
                     </code>
                 </div>
@@ -216,15 +230,220 @@
         </div>
         <div id="types">
           <div class="subtitle-no-color">Types</div>
-          <div class="desc">Soon...</div>
+          <div class="desc">
+            In barn we can specify <span class="inline-code">12</span> types. Underneath they
+            are all shown with their C/C++ equivalents:
+          </div>
+          <div>
+            <div class="code-view">
+                <code>
+                    <span class="code-gray">/* Unsigned types */</span><br>
+                    <span class="code-yellow">u8  </span>&emsp;= <span class="code-magenta">unsigned char </span> &emsp;=       <span class="code-gray">uint8_t </span><br>
+                    <span class="code-yellow">u16 </span>      = <span class="code-magenta">unsigned short</span> =             <span class="code-gray">uint16_t</span><br>
+                    <span class="code-yellow">u32 </span>      = <span class="code-magenta">unsigned int  </span> &emsp;&emsp;= <span class="code-gray">uint32_t</span><br>
+                    <span class="code-yellow">u64 </span>      = <span class="code-magenta">unsigned long </span> &emsp;=       <span class="code-gray">uint64_t</span><br><br>
+
+                    <span class="code-gray">/* Normal types */</span><br>
+                    <span class="code-yellow">i8</span>&emsp; = <span class="code-magenta">char  </span>&emsp;= <span class="code-gray">int8_t</span><br>
+                    <span class="code-yellow">i16</span>      = <span class="code-magenta">short </span>= <span class="code-gray">int16_t</span><br>
+                    <span class="code-yellow">i32</span>      = <span class="code-magenta">int   </span>&emsp;&emsp;= <span class="code-gray">int32_t</span><br>
+                    <span class="code-yellow">i64</span>      = <span class="code-magenta">long  </span>&emsp;= <span class="code-gray">int64_t</span><br><br>
+
+                    <span class="code-gray">/* Float types */</span><br>
+                    <span class="code-yellow">f32</span> = <span class="code-magenta">float </span><br>
+                    <span class="code-yellow">f64</span> = <span class="code-magenta">double</span><br><br>
+
+                    <span class="code-gray">/* Other types */</span><br>
+                    <span class="code-yellow">string</span>       = <span class="code-magenta">std::string</span><br>
+                    <span class="code-yellow">cstr  </span>&emsp; = <span class="code-magenta">char*      </span><br>
+                    <span class="code-yellow">bool  </span>&emsp; = <span class="code-magenta">bool       </span><br>
+                </code>
+            </div>
+            <div class="tip">
+                <span class="tip-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: -5px" width="28px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+                    </svg>
+                    Tip!
+                </span><br>
+                <span class="tip-value">Difference between unsigned types and normal are that unsigned types can't be smaller than 0. For example <span class="inline-code">u8</span> is between 0 and 255, but <span class="inline-code">i8</span> is between -128 and 128.</span><br>
+            </div>
+            <div class="desc">
+                There's is a file from standard library named <span class="inline-code">limits.ba</span> which defines all the limits of types in barn, here's the example use of it.
+            </div>
+            <div class="code-view">
+                <code>
+                    <span class="code-magenta">@import</span> <span class="code-green">"limits.ba"</span><br>
+                    <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+
+                    <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                        <span class="code-gray">&emsp;&emsp;/*<br>&emsp;&emsp;&emsp;&emsp;Limits.ba source code: <br>
+                        &emsp;&emsp;&emsp;&emsp;&emsp; - https://raw.githubusercontent.com/barn-lang/barn/main/lib/limits.ba<br>
+                        &emsp;&emsp;&emsp;&emsp;Here is an example use of u8 max<br>&emsp;&emsp;*/<br>
+                        &emsp;&emsp;</span><span class="code-magenta">let</span> <span class="code-blue">maximum_u8</span>: <span class="code-yellow">u8</span> = 
+                        <span class="code-blue">_LIMIT_U8_MAX</span><br>
+                    }<br>
+                </code>
+            </div>
+        </div>
         </div>
         <div id="functions">
             <div class="subtitle-no-color">Functions</div>
-            <div class="desc">Soon...</div>
+            <div class="desc">
+                Functions are the most important thing in basically every programming language. They are just a scrap of code that run when you will call
+                a function like that. Functions can return and get arguments, that are a values with types already specified. Here's an syntax of function declaration
+                in barn:
+            </div>
+            <div class="code-view">
+                <code>
+                    <span class="code-magenta">fun</span> <span class="code-blue">function_name</span>(<span class="code-yellow">argument_type</span> <span class="code-blue">argument_name</span>, ...) -> <span class="code-yellow">return_type</span> {<br>
+                    &emsp;&emsp;<span class="code-gray">/* Function body */</span><br>
+                    }
+                </code>
+            </div>
+            <div class="desc">
+                Let's analyse this code, so firstly we use <span class="inline-code">fun</span> keyword which says the compiler that we are trying to declare
+                a function, after it we expect a <span class="inline-code">function_name</span> that will used to give a name for this function (pretty obvious).
+                Next compiler will expect <span class="inline-code">(argument_type argument_name, ...)</span>, just a argument list that goes until <span class="inline-code">)</span> 
+                operator. Next function return type which is optional, the look like this arrow (<span class="inline-code">-></span>) and after it correct barn type.
+                And after all good old curly blocks <span class="inline-code">{}</span> in which we write our code! This how example function declaration and function call looks like:
+            </div>
+            <div class="code-view">
+                <code>
+                    <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
+                    <span class="code-magenta">fun</span> <span class="code-blue">foo</span>(<span class="code-yellow">i32</span> <span class="code-blue">foo_argument</span>) -> <span class="code-yellow">i32</span> {<br>
+                    &emsp;&emsp;<span class="code-magenta">return </span> <span class="code-blue">foo_argument</span> + 1<br>
+                    }<br><br>
+
+                    <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
+                        &emsp;&emsp;<span class="code-magenta">let</span> <span class="code-blue">return_of_foo</span>: <span class="code-yellow">auto</span> = <span class="code-blue">foo</span>(100)<br>
+                        &emsp;&emsp;<span class="code-blue">printnum</span>(<span class="code-blue">return_of_foo</span>)<br>
+                    }
+                </code>
+            </div>
+            <div class="tip">
+                <span class="tip-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" style="margin-bottom: -5px" width="28px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+                    </svg>
+                    Tip!
+                </span><br>
+                <span class="tip-value">Calling function and program logic can happened only inside a function body<br>
+            </div>
         </div>
         <div id="std">
             <div class="subtitle-no-color">Standard Library</div>
-            <div class="desc">Soon...</div>
+            <div class="desc">
+                Standard library is made from for now 3 files:
+                <ul style="list-style-type: decimal;">
+                    <li>
+                        <a class="normal-links" href="https://github.com/barn-lang/barn/blob/main/lib/limits.ba">limits.ba</a>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U8_MAX</span>: <span class="code-yellow">u8</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U8_MIN</span>: <span class="code-yellow">u8</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U16_MAX</span>: <span class="code-yellow">u16</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U16_MIN</span>: <span class="code-yellow">u16</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U32_MAX</span>: <span class="code-yellow">u32</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U32_MIN</span>: <span class="code-yellow">u32</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U64_MAX</span>: <span class="code-yellow">u64</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_U64_MIN</span>: <span class="code-yellow">u64</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I8_MAX</span>: <span class="code-yellow">u8</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I8_MIN</span>: <span class="code-yellow">u8</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I16_MAX</span>: <span class="code-yellow">u16</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I16_MIN</span>: <span class="code-yellow">u16</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I32_MAX</span>: <span class="code-yellow">u32</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I32_MIN</span>: <span class="code-yellow">u32</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I64_MAX</span>: <span class="code-yellow">u64</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">const</span> <span class="code-blue">_LIMIT_I64_MIN</span>: <span class="code-yellow">u64</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="normal-links" href="https://github.com/barn-lang/barn/blob/main/lib/std.ba">std.ba</a>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">string_compare</span>(<span class="code-yellow">string </span><span class="code-blue">s1</span>, <span class="code-yellow">string </span></span><span class="code-blue">s2</span>) -> <span class="code-yellow">bool</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">string_length</span>(<span class="code-yellow">string </span></span><span class="code-blue">s</span>) -> <span class="code-yellow">int</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">string_reverse</span>(<span class="code-yellow">string </span><span class="code-blue">s</span>)
+                            
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">iota</span>(<span class="code-yellow">int</span> <span class="code-blue">num</span>) -> <span class="code-yellow">string </span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">input</span>() -> <span class="code-yellow">string</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">print</span>(<span class="code-yellow">string </span><span class="code-blue">s</span>)
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">println</span>(<span class="code-yellow">string </span><span class="code-blue">s</span>)
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">puts</span>(<span class="code-yellow">string </span><span class="code-blue">s</span>) 
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">printnum</span>(<span class="code-yellow">int</span> <span class="code-blue">num</span>)
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">printbool</span>(<span class="code-yellow">bool</span> <span class="code-blue">to_print_bool</span>)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="normal-links" href="https://github.com/barn-lang/barn/blob/main/lib/os.ba">os.ba</a>
+                        <ul style="list-style-type: none;">
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">os_current_system</span>() -> <span class="code-yellow">string</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">os_file_exists</span>(<span class="code-yellow">string</span> <span class="code-blue">filename</span>) -> <span class="code-yellow">bool</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">os_read_file</span>(<span class="code-yellow">string</span> <span class="code-blue">filename</span>) -> <span class="code-yellow">string</span>
+                            </li>
+                            <li style="padding: 2px 0px;">
+                                <span class="code-magenta">fun</span> <span class="code-blue">os_write_file</span>(<span class="code-yellow">string</span> <span class="code-blue">filename</span>, <span class="code-yellow">string</span> <span class="code-blue">value</span>) -> <span class="code-yellow">bool</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
         </div>
         <div id="variables">
             <div class="subtitle-no-color">Variables</div>
@@ -242,10 +461,26 @@
             <div class="subtitle-no-color">For</div>
             <div class="desc">Soon...</div>
         </div>
+        <div id="extern">
+            <div class="subtitle-no-color">Extern</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="const">
+            <div class="subtitle-no-color">Const</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="use">
+            <div class="subtitle-no-color">Variable Use/Unused</div>
+            <div class="desc">Soon...</div>
+        </div>
+        <div id="call_c">
+            <div class="subtitle-no-color">Call C from Barn</div>
+            <div class="desc">Soon...</div>
+        </div>
     </div>
     <div class="footer">
         <div class="footer-left">
-            <span class="footer-title">Barn Language Copyrigth &copy; 2022-2023</span><br>
+            <span class="footer-title">Barn Language Copyright &copy; 2022-2023</span><br>
             <span class="footer-desc">Made with ❤️ by Barn Developers</span>
         </div>
     </div>
