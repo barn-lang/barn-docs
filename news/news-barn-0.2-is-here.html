@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barn Language - News</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+        <div class="center">
+            <div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./index.html">Home</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="documentation.html">Documentation</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="news.html">News</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="download.html">Download</a></div>
+                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="about_us.html">About us</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="warning">Barn is still in development so there's plenty of bugs, please report them at <a href="https://discord.com/invite/bv2rfyC6">Our discord server</a>. Also we don't recommend to use it in your comercial project</div> -->
+    <header class="header-gradient">
+        <div style="text-align: left;"><img src="../logo_with_barn.png" class="logo" /></div>
+        <div style="text-align: right;" class="nav-left-side">
+            <div class="menu_computer">
+                <div class="link"><a href="./index.html">Home</a></div>
+                <div class="link"><a href="documentation.html">Documentation</a></div>
+                <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
+                <div class="link"><a href="news.html">News</a></div>
+                <div class="link"><a href="download.html">Download</a></div>
+                <div class="link"><a href="about_us.html">About us</a></div>
+            </div>
+            <div class="menu_mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <div class="new-container">
+        <div class="title">Barn 0.2v is here!</div>
+        <div class="news-info">
+            <span class="news-author">SolindekDev (Owner)</span>
+            <span class="news-date">22-03-2023 20:21</span>
+        </div>
+        <div class="desc" style="margin: 20px 0px;">
+        Hi everyone!<br><br>
+
+        New update of Barn is out, it's version 0.2v that have added lot's of cool mechanics and fixed lot's of bugs. Here's full description 
+        what did we change in it. This version was made in 2/3 weeks.<br>Changes:<br>
+        <ul class="ul-news">
+            <li>
+                New look of if, elif, else, while, for statements previously it was something like this <span class="inline-code">if |statement|</span> now it's changed to<br> <span class="inline-code">if statement</span>. It looks more modern instead of these ugly | characters.
+            </li>
+            <li>
+                Added new <span class="inline-code">auto</span> type which can be used in variable type which means that the compiler decide which type will be the best
+                for this variable. Here's a example of it <span class="inline-code">let random_variable: auto = 1024 // It will be int</span>
+            </li>
+            <li>
+                New types, uhhh that was hard to implemented but now they are working! I'm so happy of this change, I can even say that was the biggest change in 0.2v. 
+                Anyway we added brand new types, here are they:<br>
+                <div class="code-view">
+                    <code>
+                        <span class="code-gray">/* Unsigned types */</span><br>
+                        <span class="code-yellow">u8  </span>&emsp;= <span class="code-magenta">unsigned char </span> &emsp;=       <span class="code-gray">uint8_t </span><br>
+                        <span class="code-yellow">u16 </span>      = <span class="code-magenta">unsigned short</span> =             <span class="code-gray">uint16_t</span><br>
+                        <span class="code-yellow">u32 </span>      = <span class="code-magenta">unsigned int  </span> &emsp;&emsp;= <span class="code-gray">uint32_t</span><br>
+                        <span class="code-yellow">u64 </span>      = <span class="code-magenta">unsigned long </span> &emsp;=       <span class="code-gray">uint64_t</span><br><br>
+    
+                        <span class="code-gray">/* Normal types */</span><br>
+                        <span class="code-yellow">i8</span>&emsp; = <span class="code-magenta">char  </span>&emsp;= <span class="code-gray">int8_t</span><br>
+                        <span class="code-yellow">i16</span>      = <span class="code-magenta">short </span>= <span class="code-gray">int16_t</span><br>
+                        <span class="code-yellow">i32</span>      = <span class="code-magenta">int   </span>&emsp;&emsp;= <span class="code-gray">int32_t</span><br>
+                        <span class="code-yellow">i64</span>      = <span class="code-magenta">long  </span>&emsp;= <span class="code-gray">int64_t</span><br><br>
+    
+                        <span class="code-gray">/* Float types */</span><br>
+                        <span class="code-yellow">f32</span> = <span class="code-magenta">float </span><br>
+                        <span class="code-yellow">f64</span> = <span class="code-magenta">double</span><br><br>
+    
+                        <span class="code-gray">/* Other types */</span><br>
+                        <span class="code-yellow">string</span>       = <span class="code-magenta">char*</span><br>
+                        <span class="code-yellow">bool  </span>&emsp; = <span class="code-magenta">bool</span><br>
+                    </code>
+                </div>
+            </li>
+            <li>
+                Unused warning and new mechanic of used variable. This mechanic works very easy basically if the variable is defined and not used a warning
+                will show up (if you want to disable these warnings use <span class="inline-code">--w-disable-unused</span>) but if the variable name starts
+                with <span class="inline-code">_</span> for example <span class="inline-code">_example_variable</span> the warning won't show because variables
+                with underscore at the start are the silent variable which don't need to be used. But if you really want to have a variable and don't change 
+                it name or deleting it there's a special builtin function named <span class="inline-code">__use__</span> which will use this variable
+            </li>
+            <li>
+                Added a keyword named <span class="inline-code">extern</span> which can extern functions from C or other compiled languages
+            </li>
+            <li>
+                Now function <span class="inline-code">__code__</span> can work outside the function body
+            </li>
+            <li>
+                Got back to good old C, so now we are compiling to C not to C++ a little change that in my opinion is the best what i can did. C++ was very 
+                hard to compile to it. C is a better option.
+            </li>
+            <li>
+                Format arguments and added <span class="inline-code">fmt_print</span> function to barn which works like <span class="inline-code">printf</span> in C
+            </li>
+            <li>
+                Added new libraries file <span class="inline-code">assert.ba</span>, <span class="inline-code">math.ba</span>, <span class="inline-code">format.ba</span> and <span class="inline-code">limits.ba</span>
+            </li>
+            <li>
+                Constant variables which value can't be modified
+            </li>
+        </ul>
+        <br>
+        These are the most important changes in 0.2v, We are working on 0.3v, in a while you can see here a new post about what we will add to 0.3v. That's
+        all for this post, thanks for reading this whole sh*t. <br><br>
+        Have a nice day/night
+    </div>
+    </div>
+</body>
+</html>
