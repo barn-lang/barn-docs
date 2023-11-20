@@ -2,189 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barn Language - Home</title>
+    <title>Barn Programming Language | Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo_dark.png" type="image/png">
 </head>
 <body>
-    <div class="menu">
-        <div class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" fill="white" class="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-        </div>
-        <div class="center">
-            <div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./index.html">Home</a></div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./documentation.html">Documentation</a></div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="https://github.com/barn-lang/barn">Github</a></div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./news.html">News</a></div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./download.html">Download</a></div>
-                <div class="link" style="display: block; text-align: center; margin-top: 20px;"><a href="./about_us.html">About us</a></div>
+    <section>
+        <div class="sk1">
+            <div class="h1">Barn: Simple and Efficient Programming Language 🚀</div><br />
+            <span class="span">Barn is a simple and efficient programming language designed for beginners and experienced programmers alike. It is compiled to C, making it fast and portable. Barn has a clean and easy-to-read syntax, making it a great choice for learning programming. It also has a growing community of users and contributors.</span>        
+            <br /><br />
+            <span class="span">So, the whole Barn adventure started when I got back from school, wondering about how compilers really work. I decided to dig into the topic a bit more. After picking up some knowledge, I thought, "Why not create my own programming language that will compile to C?". <br/><br/></span><span class="span">Now, why the name Barn? No clue, but it just stuck up because how short and easy it is (Barn means Children in Swedish... So saying "I like barn" in beautiful Stockholm might be a little risky).</span>
+                <br/>
+                <br/>
+                <span class="span">    The first compiler of barn, was named BarnGo, it was a bit of a mess and had lots of design issues. So, I decided to ditch the GoLang version and roll up my sleeves for a fresh start in C sometimes named BarnC.
+                <br/>
+                <br/></span>
+                
+                <span class="span">     And here we are, on this wild ride of Barn development. It's been a journey, fixing things, making it better. Who knew diving into compiler intricacies could lead to this? Anyway, we're making a language, having some fun, and maybe learning a thing or two along the way!</span>
+            </span>
+            <div class="buttons">
+                <button class="btn" >Documentation</button>
+                <button class="btn" >Github</button>
+                <button class="btn" >Author</button>
+                <button class="btn" >Playground</button>
+                <button class="btn" >Discord</button>
             </div>
         </div>
-    </div>
-    <!-- <div class="warning">Barn is still in development so there's plenty of bugs, please report them at <a href="https://discord.com/invite/bv2rfyC6">Our discord server</a>. Also we don't recommend to use it in your comercial project</div> -->
-    <container class="main-container">
-        <header>
-            <div style="text-align: left;"><img src="logo_with_barn.png" class="logo" /></div>
-            <div style="text-align: right;" class="nav-left-side">
-                <div class="menu_computer">
-                    <div class="link"><a href="./index.html">Home</a></div>
-                    <div class="link"><a href="./documentation.html">Documentation</a></div>
-                    <div class="link"><a href="https://github.com/barn-lang/barn">Github</a></div>
-                    <div class="link"><a href="./news.html">News</a></div>
-                    <div class="link"><a href="./download.html">Download</a></div>
-                    <div class="link"><a href="./about_us.html">About us</a></div>
-                </div>
-                <div class="menu_mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                    </svg>
-                </div>
-            </div>
-        </header>
-        <div class="container">
-            <div>
-                <div style="margin-bottom: 15px;" class="container-title-margin"><span style="font-size: 70px; font-weight: 700;" class="container-title-main">Fast and easy programming!</span></div>
-                <span style="font-size: 24px; font-weight: 600;" class="container-title-desc">Create everything you really like in a brand new, complex and easy syntax<br>  programming language that is well documented. That's all Barn!</span>
-                <br><br>
-                <a href="./documentation.html"><button class="btn-simple">Documentation</button></a>
-                <a href="./news.html"><button class="btn-simple">News</button></a>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
-            <div>
-                <a href="#code_example">
-                    <svg class="arrowdown" fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                        viewBox="0 0 330 330" xml:space="preserve">
-                    <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
-                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
-                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div id="code_example">
-            <div>
-                <div class="title">Look at our easy syntax</div>
-                <div class="desc">
-                    Barn syntax is very very easy, it's inspired with syntax languages like C, JavaScript, Go, Rust and other.
-                    Syntax is still in development, and we are constantly changing it!
-                </div>
-                <div>
-                    <div class="code-view">
-                        <code>
-                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
-                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
-                            &emsp;<span class="code-blue">println</span>(<span class="code-green">"Hello, World!"</span>)<br>
-                            }<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="code_example">
-            <div>
-                <div class="title">How to learn?</div>
-                <div class="desc">
-                    Barn is extreamly easy and don't have any complex mechanics, but as every programming language you need to write & learn to get
-                    fluent in it. The best source of learning is our <a class="normal-links" href="documentation.html">Documentation</a> where everything is shown very well.
-                    <!-- Remember Barn is still in development and everything can always change that's why our Documentation is divided
-                    in subpages that show every version documentation -->
-                </div>
-                <div>
-                    <div class="code-view">
-                        <code>
-                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
-                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
-                            &emsp;<span class="code-magenta">let</span> <span class="code-blue">is_barn_hard</span>: <span class="code-yellow">auto</span> = <span class="code-blue">false</span> <span class="code-gray">// Of course it isn't hard</span><br>
-                            &emsp;<span class="code-magenta">if</span> <span class="code-blue">is_barn_hard</span> == <span class="code-blue">false</span> {<br> 
-                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"Barn is extreamly easyyy"</span>)<br>
-                            &emsp;} <span class="code-magenta">else</span> {<br>
-                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"This print wouldn't show anytime soon, because barn is easy lol"</span>)<br>
-                            &emsp;}<br>
-                            }<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="code_example">
-            <div>
-                <div class="title">100% Free and Open Source</div>
-                <div class="desc">
-                    Everything that is open source and free is better! Like Linus Torvald the Linux Kernel author said:
-                    <div class="quote">
-                        Software is like sex: it's better when it's free. ~ Linus Torvald
-                    </div>
-                    It will be pretty weird when an compiler wouldn't be free and globally avaliable. So everyone can build, run and code in barn
-                    100% free and safe.
-                </div>
-                <div>
-                    <div class="code-view">
-                        <code>
-                            <span class="code-magenta">@import</span> <span class="code-green">"std.ba"</span><br><br>
-                            <span class="code-magenta">fun</span> <span class="code-blue">main</span>() {<br>
-                            &emsp;<span class="code-magenta">let</span> <span class="code-blue">open_source_software</span>: <span class="code-yellow">auto</span> = <span class="code-blue">true</span><br>
-                            &emsp;<span class="code-magenta">if</span> <span class="code-blue">open_source_software</span> == <span class="code-blue">true</span> {<br> 
-                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"This software is cool!"</span>)<br>
-                            &emsp;} <span class="code-magenta">else</span> {<br>
-                            &emsp;&emsp;<span class="code-blue">println</span>(<span class="code-green">"Nah we want the source lol"</span>)<br>
-                            &emsp;}<br>
-                            }<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="start_using">
-            <div style="text-align: center;">
-                <span class="title-no-color">Start using Barn today!</span><br>
-                <span class="desc-no-color">Join to our Discord Community</span>
-            </div>
-        </div>
-        <div class="discord-server-widget-container">
-            <div class="discord-server-widget">
-                <div style="display: inline-block; padding-right: 30px">
-                    <span class="discord-server-widget-title">Average Barn Enjoyers</span><br>
-                    <span class="discord-server-widget-desc">Members 69</span>
-                </div>
-                <div style="display: inline-block;">
-                    <a href="https://discord.com/invite/bv2rfyC6">
-                        <button class="discord-server-widget-button">Join!</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-left">
-                <span class="footer-title">Barn Language Copyright &copy; 2022-2023</span><br>
-                <span class="footer-desc">Made with ❤️ by Barn Developers</span>
-            </div>
-        </div>
-    </container>
-    <script>
-        // https://discord.com/api/guilds/1028291656862142466/widget.json
+        <div class="sk2">
+            <code>
+                <!-- @import "std.ba"<br/><br/>
+    
+                fun main() -> i32 {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;fmt_print("Hello, World!")<br/>
+                }<br/> -->
 
-        fetch("https://discord.com/api/guilds/1028291656862142466/widget.json")
-            .then((res) => res.json())
-            .then((res) => {
-                console.log(res)
-                document.querySelector(".discord-server-widget-title").innerHTML = res.name;
-                document.querySelector(".discord-server-widget-desc").innerHTML = `Members online ${res.members.length}`;
-            })
+                <span class="keywords">@import</span> <span class="strings">"std.ba"</span><br/>
+                <span class="keywords">@import</span> <span class="strings">"math.ba"</span><br/><br/>
 
-        document.querySelector(".menu_mobile").onclick = () => {
-            document.querySelector(".menu").style.display = "block";
-            document.querySelector(".menu").style.position = "fixed";
-        }
+                <span class="keywords">fun</span> <span class="identifier">main</span>() -> <span class="type">i32</span> {
+                <div class="tab">
+                    <span class="identifier">println</span>(<span class="strings">"Enter the radius of the circle:"</span>)<br />
+                    <span class="keywords">let</span> <span class="identifier">circle_radius</span>: 
+                        <span class="type">f32</span> = <span class="identifier">parse_float</span>(<span class="identifier">read_line_stdin</span>())</span><br />
+                    <br /><span class="keywords">if</span> <span class="identifier">circle_radius</span><span class="math"> < 0</span> {
+                    <div class="tab">
+                        <span class="identifier">println</span>(<span class="strings">"Incorrect circle radius"</span>)<br />
+                    </div>
+                    } <span class="keywords">else</span> {
+                    <div class="tab">
+                        <span class="keywords">let</span> <span class="identifier">circle_area</span>: 
+                        <span class="type">f32</span> = <span class="math">_MATH_PI * circle_radius * circle_radius </span><br />
+                        <span class="identifier">fmt_printf</span>(<span class="strings">"Circle area = πr² = %f\n"</span>, <span class="identifier">circle_area</span>)<br />
+                    </div>
+                    }<br /><br />
 
-        document.querySelector(".close").onclick = () => {
-            document.querySelector(".menu").style.display = "none";
-        }
-    </script>
+                    <span class="keywords">return</span> <span class="math">0</span>
+                </div>
+                }
+            </code>
+            <div class="output">
+                <code>
+                    $ barn ./main.ba<br/>
+                    $ ./b.out<br/><br/>
+                    Enter the radius of the circle:<br/>
+                    20<br/>
+                    Circle area = πr² = 1256.6<br/>
+                </code>
+            </div>
+
+        </div>
+    </section>
+
 </body>
 </html>
