@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Golos+Text:wght@400;500;600;700;800;900&family=Tilt+Warp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -43,17 +44,19 @@ section {
 }
 
 code {
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: monospace;
 }
 
 .sk2 {
     position:static;
-    font-size: 24px;
+    font-size: 20px;
     /* border: 2px solid rgb(154, 154, 154); */
     border-left: 2px solid #2d2d34;
     /* border-radius: 24px; */
     min-height: 85vh;
-    padding: 20px 30px;
+    padding: 30px 30px;
 }
 
 .tab {
