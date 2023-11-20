@@ -7,72 +7,86 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <div class="sk1">
-            <div class="h1">Barn: Simple and Efficient Programming Language 🚀</div><br />
-            <span class="span">Barn is a simple and efficient programming language designed for beginners and experienced programmers alike. It is compiled to C, making it fast and portable. Barn has a clean and easy-to-read syntax, making it a great choice for learning programming. It also has a growing community of users and contributors.</span>        
-            <br /><br />
-            <span class="span">So, the whole Barn adventure started when I got back from school, wondering about how compilers really work. I decided to dig into the topic a bit more. After picking up some knowledge, I thought, "Why not create my own programming language that will compile to C?". <br/><br/></span><span class="span">Now, why the name Barn? No clue, but it just stuck up because how short and easy it is (Barn means Children in Swedish... So saying "I like barn" in beautiful Stockholm might be a little risky).</span>
-                <br/>
-                <br/>
-                <span class="span">    The first compiler of barn, was named BarnGo, it was a bit of a mess and had lots of design issues. So, I decided to ditch the GoLang version and roll up my sleeves for a fresh start in C sometimes named BarnC.
-                <br/>
-                <br/></span>
-                
-                <span class="span">     And here we are, on this wild ride of Barn development. It's been a journey, fixing things, making it better. Who knew diving into compiler intricacies could lead to this? Anyway, we're making a language, having some fun, and maybe learning a thing or two along the way!</span>
-            </span>
-            <div class="buttons">
-                <button class="btn" >Documentation</button>
-                <button class="btn" >Github</button>
-                <button class="btn" >Author</button>
-                <button class="btn" >Playground</button>
-                <button class="btn" >Discord</button>
-            </div>
+    <nav>
+        <div>
+            <img src="logo.png"/>
         </div>
-        <div class="sk2">
-            <code>
-                <!-- @import "std.ba"<br/><br/>
-    
-                fun main() -> i32 {<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;fmt_print("Hello, World!")<br/>
-                }<br/> -->
-
-                <span class="keywords">@import</span> <span class="strings">"std.ba"</span><br/>
-                <span class="keywords">@import</span> <span class="strings">"math.ba"</span><br/><br/>
-
-                <span class="keywords">fun</span> <span class="identifier">main</span>() -> <span class="type">i32</span> {
-                <div class="tab">
-                    <span class="identifier">println</span>(<span class="strings">"Enter the radius of the circle:"</span>)<br />
-                    <span class="keywords">let</span> <span class="identifier">circle_radius</span>: 
-                        <span class="type">f32</span> = <span class="identifier">parse_float</span>(<span class="identifier">read_line_stdin</span>())</span><br />
-                    <br /><span class="keywords">if</span> <span class="identifier">circle_radius</span><span class="math"> < 0</span> {
-                    <div class="tab">
-                        <span class="identifier">println</span>(<span class="strings">"Incorrect circle radius"</span>)<br />
-                    </div>
-                    } <span class="keywords">else</span> {
-                    <div class="tab">
-                        <span class="keywords">let</span> <span class="identifier">circle_area</span>: 
-                        <span class="type">f32</span> = <span class="math">_MATH_PI * circle_radius * circle_radius </span><br />
-                        <span class="identifier">fmt_printf</span>(<span class="strings">"Circle area = πr² = %f\n"</span>, <span class="identifier">circle_area</span>)<br />
-                    </div>
-                    }<br /><br />
-
-                    <span class="keywords">return</span> <span class="math">0</span>
-                </div>
-                }
-            </code>
-            <div class="output">
+        <div>
+            <ul>
+                <li><a href="/documentation.html">Documentation</a></li>
+                <li><a href="https://github.com/barn-lang/barn">Github</a></li>
+                <li><a href="/playground.html">Playground</a></li>
+                <li><a href="https://discord.gg/CaXfz6q4pk">Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="padding: 0% 4% 2% 4%;">
+        <section>
+            <div class="sk1">
+                <div class="h1">Barn: Simple and Efficient Programming Language 🚀</div><br />
+                <span class="span">Barn is a simple and efficient programming language designed for beginners and experienced programmers alike. It is compiled to C, making it fast and portable. Barn has a clean and easy-to-read syntax, making it a great choice for learning programming. It also has a growing community of users and contributors.</span>        
+                <br /><br />
+                <span class="span">So, the whole Barn adventure started when I got back from school, wondering about how compilers really work. I decided to dig into the topic a bit more. After picking up some knowledge, I thought, "Why not create my own programming language that will compile to C?". <br/><br/></span><span class="span">Now, why the name Barn? No clue, but it just stuck up because how short and easy it is (Barn means Children in Swedish... So saying "I like barn" in beautiful Stockholm might be a little risky).</span>
+                    <br/>
+                    <br/>
+                    <span class="span">    The first compiler of barn, was named BarnGo, it was a bit of a mess and had lots of design issues. So, I decided to ditch the GoLang version and roll up my sleeves for a fresh start in C sometimes named BarnC.
+                    <br/>
+                    <br/></span>
+                    
+                    <span class="span">     And here we are, on this wild ride of Barn development. It's been a journey, fixing things, making it better. Who knew diving into compiler intricacies could lead to this? Anyway, we're making a language, having some fun, and maybe learning a thing or two along the way!</span>
+                </span>
+                <!-- <div class="buttons">
+                    <button class="btn" >Documentation</button>
+                    <button class="btn" >Github</button>
+                    <button class="btn" >Author</button>
+                    <button class="btn" >Playground</button>
+                    <button class="btn" >Discord</button>
+                </div> -->
+            </div>
+            <div class="sk2">
                 <code>
-                    $ barn ./main.ba<br/>
-                    $ ./b.out<br/><br/>
-                    Enter the radius of the circle:<br/>
-                    20<br/>
-                    Circle area = πr² = 1256.6<br/>
+                    <!-- @import "std.ba"<br/><br/>
+        
+                    fun main() -> i32 {<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;fmt_print("Hello, World!")<br/>
+                    }<br/> -->
+
+                    <span class="keywords">@import</span> <span class="strings">"std.ba"</span><br/>
+                    <span class="keywords">@import</span> <span class="strings">"math.ba"</span><br/><br/>
+
+                    <span class="keywords">fun</span> <span class="identifier">main</span>() -> <span class="type">i32</span> {
+                    <div class="tab">
+                        <span class="identifier">println</span>(<span class="strings">"Enter the radius of the circle:"</span>)<br />
+                        <span class="keywords">let</span> <span class="identifier">circle_radius</span>: 
+                            <span class="type">f32</span> = <span class="identifier">parse_float</span>(<span class="identifier">read_line_stdin</span>())</span><br />
+                        <br /><span class="keywords">if</span> <span class="identifier">circle_radius</span><span class="math"> < 0</span> {
+                        <div class="tab">
+                            <span class="identifier">println</span>(<span class="strings">"Incorrect circle radius"</span>)<br />
+                        </div>
+                        } <span class="keywords">else</span> {
+                        <div class="tab">
+                            <span class="keywords">let</span> <span class="identifier">circle_area</span>: 
+                            <span class="type">f32</span> = <span class="math">_MATH_PI * circle_radius * circle_radius </span><br />
+                            <span class="identifier">fmt_printf</span>(<span class="strings">"Circle area = πr² = %f\n"</span>, <span class="identifier">circle_area</span>)<br />
+                        </div>
+                        }<br /><br />
+
+                        <span class="keywords">return</span> <span class="math">0</span>
+                    </div>
+                    }
                 </code>
+                <div class="output">
+                    <code>
+                        $ barn ./main.ba<br/>
+                        $ ./b.out<br/><br/>
+                        Enter the radius of the circle:<br/>
+                        20<br/>
+                        Circle area = πr² = 1256.6<br/>
+                    </code>
+                </div>
+
             </div>
-
-        </div>
-    </section>
-
+        </section>
+    </div>
 </body>
 </html>
