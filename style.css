@@ -108,6 +108,7 @@ code {
 
 nav img {
     width: 48px;
+    height: 48px;
 }
 
 nav {
@@ -271,6 +272,7 @@ nav div ul li a {
 
     nav div img {
         width: 32px;
+        height: 32px;
     }
     
     nav div ul li {
@@ -331,6 +333,7 @@ nav div ul li a {
 
     nav div img {
         width: 24px;
+        height: 24px;
     }
     
     nav div ul li {
