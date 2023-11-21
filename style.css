@@ -51,7 +51,7 @@ code {
 
 .sk2 {
     position:static;
-    font-size: 20px;
+    font-size: 18px;
     /* border: 2px solid rgb(154, 154, 154); */
     border-left: 2px solid #2d2d34;
     /* border-radius: 24px; */
@@ -132,3 +132,218 @@ nav div ul li a {
     text-decoration: none;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 1546px) {
+    .sk2 {
+        position:static;
+        font-size: 16px;
+        padding: 30px 20px;
+    }
+
+    .h1 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    .span {
+        font-size: 16px;
+        font-weight: 20;
+        /* padding-left: 10px; */
+    }
+}
+
+@media only screen and (max-width: 1546px) {
+    .sk2 {
+        position:static;
+        font-size: 14px;
+        padding: 30px 0px 30px 20px;
+    }
+
+    .h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .span {
+        font-size: 14px;
+        font-weight: 20;
+        /* padding-left: 10px; */
+    }
+}
+
+@media only screen and (max-width: 1142px) {
+    section {
+        display: block; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sk1 {
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .sk2 {
+        width: 100%;
+        position:static;
+        font-size: 14px;
+        border-top: 2px solid #2d2d34;
+        border-left: none;
+        padding: 30px 30px;
+    }
+}
+
+@media only screen and (max-width: 614px) {
+    section {
+        display: block; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sk1 {
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .sk2 {
+        width: 100%;
+        position:static;
+        font-size: 12px;
+        border-top: 2px solid #2d2d34;
+        border-left: none;
+        padding: 30px 30px;
+    }
+
+    .h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .span {
+        font-size: 12px;
+        font-weight: 20;
+        /* padding-left: 10px; */
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    section {
+        display: block; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sk1 {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .sk2 {
+        width: 100%;
+        position:static;
+        font-size: 10px;
+        border-top: 2px solid #2d2d34;
+        border-left: none;
+        padding: 30px 15px;
+    }
+
+    .h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .span {
+        font-size: 12px;
+        font-weight: 20;
+        /* padding-left: 10px; */
+    }
+
+    nav {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 3%;
+        padding-right: 3%;
+        border-bottom: 2px solid #2d2d34;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav div img {
+        width: 32px;
+    }
+    
+    nav div ul li {
+        display: inline-block;
+        padding: 0px 5px;
+    }
+    
+    nav div ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    section {
+        display: block; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sk1 {
+        width: 100%;
+        padding: 30px 10px 30px 10px;
+    }
+    
+    .sk2 {
+        width: 100%;
+        position:static;
+        font-size: 10px;
+        border-top: 2px solid #2d2d34;
+        border-left: none;
+        padding: 30px 10px;
+    }
+
+    .h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .span {
+        font-size: 12px;
+        font-weight: 20;
+        /* padding-left: 10px; */
+    }
+
+    nav {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 3%;
+        padding-right: 3%;
+        border-bottom: 2px solid #2d2d34;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav div img {
+        width: 24px;
+    }
+    
+    nav div ul li {
+        display: inline-block;
+        padding: 0px 5px;
+    }
+    
+    nav div ul li a {
+        color: white;
+        font-size: 10px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+

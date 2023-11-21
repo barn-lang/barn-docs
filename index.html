@@ -66,7 +66,7 @@
                         } <span class="keywords">else</span> {
                         <div class="tab">
                             <span class="keywords">let</span> <span class="identifier">circle_area</span>: 
-                            <span class="type">f32</span> = <span class="math">_MATH_PI * circle_radius * circle_radius </span><br />
+                            <span class="type">f32</span> = <span class="math">_MATH_PI * <span class="identifier">pow2</span>(<span class="identifier">circle_radius</span>)</span><br />
                             <span class="identifier">fmt_printf</span>(<span class="strings">"Circle area = πr² = %f\n"</span>, <span class="identifier">circle_area</span>)<br />
                         </div>
                         }<br /><br />
