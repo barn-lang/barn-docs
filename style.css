@@ -349,4 +349,49 @@ nav div ul li a {
     }
 }
 
+.documentation-h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 210%;
+}
 
+.documentation-h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+}
+
+.documentation-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+a {
+    color:rgb(177, 180, 183);
+    text-decoration: none;
+}
+
+.code {
+    width: 80%;
+    background-color: #101012;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: #2d2d34 solid 2px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.code_inline {
+    background-color: #101012;
+    padding: 2px 5px;
+    margin: 2px 2px;
+    border-radius: 8px;
+    border: #2d2d34 solid 2px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.comment {
+    color: gray;
+}

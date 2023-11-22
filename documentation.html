@@ -13,14 +13,70 @@
         </div>
         <div>
             <ul>
-                <li><a href="./documentation.html">Documentation</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="https://github.com/barn-lang/barn">Github</a></li>
                 <li><a href="./playground.html">Playground</a></li>
                 <li><a href="https://discord.gg/CaXfz6q4pk">Discord</a></li>
             </ul>
         </div>
     </nav>
-    <div style="padding: 0% 4% 2% 4%;">
+    <div style="padding: 4%;">
+        <span class="documentation-h1">Welcome to the Barn Programming Language Documentation 🔮</span><br/>
+        <span class="documentation-h2" id="introduction">Introduction</span><br/>
+        <span class="documentation-text">Welcome to the official documentation for Barn, a modern and versatile programming language designed for simplicity and efficiency. Whether you're a seasoned developer or just starting your coding journey, this documentation serves as your comprehensive guide to understanding and harnessing the power of Barn.</span><br /><br />
+        <span class="documentation-h2" id="table_of_contents">Table of Contents</span><br/>
+        <span class="documentation-text">
+            <ul>
+                <li><a href="#table_of_contents">Table of Contents</a></li>
+                <li><a href="#getting_started">Getting Started</a></li>
+                <ul>
+                    <li><a href="#installation_guide">Installation Guide</a></li>
+                    <li><a href="#hello_world_in_barn">Hello, World! in Barn</a></li>
+                </ul>
+            </ul>
+        </span>
+        <span class="documentation-h1" id="getting_started">Getting Started</span><br />
+
+        <span class="documentation-h2" id="installation_guide">Installation Guide</span><br />
+        <span class="documentation-text">Before you can dive into the world of Barn, you need to install the Barn compiler and set up your development environment. The installation guide provides step-by-step instructions for various platforms, ensuring a smooth start to your Barn programming journey.</span><br /><br />
+        <span class="documentation-text">If you're using a Linux, MacOS or other Unix-Like operating system you can easily build Barn using commands below. Make sure that GCC (or any other C compiler) and Makefile is installed on your machine.</span><br /><br />
+        <div class="code">
+            <code>
+                git clone https://github.com/barn-lang/barn && cd barn<br/>
+                make CC=gcc <span class="comment"># Set the compiler you will use</span><br/>
+                make install <br/>
+                barn --version <br/>
+            </code>
+        </div><br/><br/>
+        <span class="documentation-text">If you are using Windows</span><br /><br />
+        <div class="code">
+            <code>
+                idk i don't have windows so i can't test it rn lol (this is just for now)
+            </code>
+        </div><br/><br/>
+
+        <span class="documentation-h2" id="hello_world_in_barn">Hello, World! in Barn</span><br />
+        <span class="documentation-text">Let's kick things off with a simple "Hello, World!" program in Barn. This introductory example will familiarize you with the basic syntax and structure of a Barn program, setting the stage for more complex projects.</span><br /><br/>
+        <div class="code">
+            <code>
+                <span class="keywords">@import</span> <span class="strings">"std.ba"</span><br/><br/>
+                
+                <span class="keywords">fun</span> <span class="identifier">main</span>() -> <span class="type">i32</span> {
+                    <div class="tab">
+                        <span class="identifier">println</span>(<span class="strings">"Hello, World!"</span>)<br />
+                        <span class="keywords">return</span> <span class="math">0</span>
+                    </div>
+                    }
+            </code>
+        </div>
+        <span class="documentation-text">
+            <ul>
+                <li><span class="code_inline">import "std.ba"</span>: This line imports the standard library module named <span class="code_inline">"std.ba"</span> into your Barn program. The <span class="code_inline">"std.ba"</span> module likely contains essential functions and utilities that are commonly used in Barn programs. By importing it, you gain access to these functionalities, making your code more powerful and versatile.</li>
+                <li><span class="code_inline">fun main() -> i32</span>: This line declares the main function, the entry point of the Barn program. The <span class="code_inline">-> i32</span> specifies that the main function returns an integer (<span class="code_inline">i32</span>).</li>
+                <li><span class="code_inline">println("Hello, World!")</span>: Inside the main function, this line calls the println function, likely provided by the <span class="code_inline">"std.ba"</span> module. It prints the string <span class="code_inline">"Hello, World"</span> to the standard output, making it visible when you run the program.</li>
+                <li><span class="code_inline">return 0</span>: The main function concludes with return 0, indicating that the program executed successfully. In many programming languages, a return value of 0 conventionally signifies that the program terminated without errors.</li>
+            </ul>
+        </span>
     </div>
 </body>
 </html>
